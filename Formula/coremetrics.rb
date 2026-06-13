@@ -2,21 +2,20 @@ class Coremetrics < Formula
   desc "Cross-platform desktop system metrics monitor (CPU, RAM, GPU, processes)"
   homepage "https://github.com/sviatil0/coremetrics"
   license "LGPL-2.1-only"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     on_arm do
-      url "https://github.com/sviatil0/coremetrics/releases/download/v0.1.0/coremetrics-v0.1.0-macos-arm64.tar.gz"
-      sha256 "addf1c0a10a14e97ed1fa446d97b6f6b42ef7ad277a96ebc10be0f7bf1df93c9"
+      url "https://github.com/sviatil0/coremetrics/releases/download/v0.1.1/coremetrics-v0.1.1-macos-arm64.tar.gz"
+      sha256 "0569f03d2e3aed9419a7be0e431230bd8b02f0d51df0430476fb6efd0facaa7c"
     end
-    # v0.1.0 was built only on macos-latest (Apple Silicon). The Intel mac
-    # tarball will land in v0.1.1 once the release workflow adds a macos-13
-    # leg.
+    # v0.1.1 was built only on macos-latest (Apple Silicon). The Intel mac
+    # tarball will land in a future release once macos-13 joins the matrix.
   end
 
   on_linux do
-    url "https://github.com/sviatil0/coremetrics/releases/download/v0.1.0/coremetrics-v0.1.0-linux-x86_64.tar.gz"
-    sha256 "bccdfbbbb72c96143a34c0df6596a91b3fc5a9fc4a38ac4da40047d63d22f0ef"
+    url "https://github.com/sviatil0/coremetrics/releases/download/v0.1.1/coremetrics-v0.1.1-linux-x86_64.tar.gz"
+    sha256 "a0bfdf1cda959417d2a3ea4b53fa7a8f24616cb91d51c38cbf991f458ec605f6"
   end
 
   depends_on "sdl3"
@@ -35,7 +34,7 @@ class Coremetrics < Formula
   test do
     # Smoke test: --duration 1 launches the live UI and exits cleanly in
     # ~1 second. Confirms the binary is linkable against the depends_on
-    # SDL3 trio and that the lifecycle controls from upstream PR #5 work.
+    # SDL3 trio and that the lifecycle controls work.
     system bin/"coremetrics", "--duration", "1"
   end
 end
