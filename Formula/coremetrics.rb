@@ -2,18 +2,18 @@ class Coremetrics < Formula
   desc "Cross-platform desktop system metrics monitor (CPU, RAM, GPU, processes)"
   homepage "https://github.com/sviatil0/coremetrics"
   license "LGPL-2.1-only"
-  version "0.2.14"
+  version "0.2.15"
 
   on_macos do
     on_arm do
-      url "https://github.com/sviatil0/coremetrics/releases/download/v0.2.14/coremetrics-v0.2.14-macos-arm64.tar.gz"
-      sha256 "4d69ddf647c393879dc4f75ccb7fce49ef768ab5b4b45359e8e2363f038ba844"
+      url "https://github.com/sviatil0/coremetrics/releases/download/v0.2.15/coremetrics-v0.2.15-macos-arm64.tar.gz"
+      sha256 "a20f82d76c2e36066d743d7ad97250548a171305669978c308e203e4ef4c694a"
     end
   end
 
   on_linux do
-    url "https://github.com/sviatil0/coremetrics/releases/download/v0.2.14/coremetrics-v0.2.14-linux-x86_64.tar.gz"
-    sha256 "2914232cd2fe7a191cce068aa8a00e471370e7399abe2dfa60f35793e00e9991"
+    url "https://github.com/sviatil0/coremetrics/releases/download/v0.2.15/coremetrics-v0.2.15-linux-x86_64.tar.gz"
+    sha256 "d0637aa9fc84a9e49fb798c15ce0622caf5596483050b5832dac695b1462b12d"
   end
 
   depends_on "sdl3"
